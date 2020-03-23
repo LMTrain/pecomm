@@ -1,0 +1,58 @@
+
+.detail-box {
+  background:white;
+  border-radius: 32px;
+  height: 660px !important; 
+  position: inherit;
+  width: 1200px !important;
+  box-shadow: 0 -10px 29px #6f6666, 0 19px 29px #6f6666;
+  text-align: left;
+  margin-top: 50px;
+  padding-top: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  font-size: 18px;
+  overflow: auto; 
+}
+
+.detail-box >.img-container {
+  height: 100%;
+  overflow: hidden;
+  text-align: left;
+  background:white;
+  padding-left: 5px;
+  padding-right: -1px;
+  cursor: default;
+}
+.detail-box > .img-container > img {
+  width: 30%;
+  padding-top: 1px;
+  padding-left: 5px;
+  padding-right: -1px;
+}
+
+.detail-box > .content {
+  padding-top: -4rem;
+  padding-left: -2px;
+  padding-right: -1px;
+  font-size: 15px;
+}
+
+.detail-box > .content > ul {
+  list-style-type: none;
+  padding-left: -2px;
+  padding-right: -1px;
+  font-size: 15px;
+}
+
+.detail-box > .content > ul > li {
+  margin-top: 18px;
+  padding-left: -1px;
+  padding-right: -1px;
+  font-size: 15px;
+}
+.td-button {
+ border: none;
+}
+
