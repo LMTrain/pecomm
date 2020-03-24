@@ -50,6 +50,7 @@ module.exports = {
   },
 
   create: function(req, res) {
+    
   db.user.find({"userName" : req.body.userName}, function(error, data){
     if(error) throw error
       if(data.length !== 0){
