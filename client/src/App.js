@@ -166,6 +166,7 @@ class App extends React.Component {
     // SAVING ITEM TO DB CART
     updateCartDB = () => {      
       let memberId = String(this.state.currentUser)
+      let itemDBid = String(itemToCart[0][0].parentItemId)
       let itemDB = String(itemToCart[0][0].name)
       let qtyDB = 1
       let unitPriceDB = Number(itemToCart[0][0].salePrice)
@@ -173,7 +174,8 @@ class App extends React.Component {
       let descriptionDB = String(itemToCart[0][0].shortDescription)
       let thumbnailDB = String(itemToCart[0][0].largeImage)
       API.saveCart({
-        memberId: memberId,        
+        memberId: memberId,
+        itemid: itemDBid,      
         item: itemDB,
         qty:	qtyDB,
         price: unitPriceDB,
@@ -198,14 +200,16 @@ class App extends React.Component {
   // SAVE ORDERS TO DB
     updateOrdersDB = (id) => {     
       let memberId = String(this.state.currentUser)
+      let itemDBid = String(itemToCart[0][0].parentItemId)
       let itemDB = String(itemToCart[0][0].name)
       let qtyDB = 1
       let unitPriceDB = Number(itemToCart[0][0].salePrice)
       let linkDB = String(itemToCart[0][0].productUrl)
       let descriptionDB = String(itemToCart[0][0].shortDescription)
       let thumbnailDB = String(itemToCart[0][0].largeImage)      
-      API.updateOrders({
-        memberId: memberId,        
+      API.saveOrder({
+        memberId: memberId,
+        itemid: itemDBid,        
         item: itemDB,
         qty:	qtyDB,
         price: unitPriceDB,

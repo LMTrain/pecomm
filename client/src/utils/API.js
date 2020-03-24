@@ -30,8 +30,8 @@ export default {
   },
   
   // CART DB UPDATE
-  saveOrders: function(orders) {    
-    return axios.put("/api/orders/", orders);  
+  saveOrder: function(order) {    
+    return axios.post("/api/orders/", order);  
   },
 
   // SAVED ITEMS DB UPDATE
